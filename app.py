@@ -46,8 +46,8 @@ st.markdown('<h1 class="main-header">🏔️ Altitude Sickness Risk Analyzer</h1
 def get_elevation(location_name):
     """Get elevation for a location using OpenStreetMap Nominatim API"""
     try:
-        # Geocode the location
-        geocode_url = f"https://nominatim.openstreetmap.org/search?q={location_name}&format=json&limit=1"
+        # Geocode the location with English language preference
+        geocode_url = f"https://nominatim.openstreetmap.org/search?q={location_name}&format=json&limit=1&accept-language=en"
         headers = {'User-Agent': 'AltitudeSicknessAnalyzer/1.0'}
         response = requests.get(geocode_url, headers=headers, timeout=10)
         
