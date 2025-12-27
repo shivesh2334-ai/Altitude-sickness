@@ -486,3 +486,4 @@ if 'elevation_data' in st.session_state and st.session_state['elevation_data']['
             - **Start:** Day before ascent
             - **Duration:** 4 days at highest elevation (up to 7 days if rapid ascent)
             - **Evidence:** MODERATE
+            """)
