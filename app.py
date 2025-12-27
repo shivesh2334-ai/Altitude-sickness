@@ -485,5 +485,425 @@ if 'elevation_data' in st.session_state and st.session_state['elevation_data']['
             - **Dose:** 30mg extended release every 12 hours
             - **Start:** Day before ascent
             - **Duration:** 4 days at highest elevation (up to 7 days if rapid ascent)
-            - **Evidence:** MODERATE
+            - **Evidence:** MODERATE-QUALITY
+            - **Risk:** May cause hypotension (uncommon with ER version)
+            
+            **Tadalafil (STRONG RECOMMENDATION - Alternative):**
+            - **Dose:** 10mg every 12 hours
+            - **Use:** When nifedipine contraindicated
+            - **Evidence:** LOW-QUALITY
+            - **Note:** Limited clinical experience
+            
+            **Dexamethasone (STRONG RECOMMENDATION - Second Alternative):**
+            - **Dose:** 8mg every 12 hours
+            - **Use:** When nifedipine and tadalafil contraindicated
+            - **Evidence:** LOW-QUALITY
+            - **Note:** Mechanism unclear, limited experience
+            
+            **Salmeterol (NOT RECOMMENDED):**
+            - High doses (125μg twice daily) showed benefit
+            - Significant side effects (tremor, tachycardia)
+            - Limited clinical experience
+            
+            **Acetazolamide:**
+            - NOT recommended for HAPE prevention
+            - May be considered for re-entry HAPE
             """)
+    
+    # Treatment Guidelines
+    st.markdown("---")
+    st.header("💊 Treatment Guidelines (WMS 2024)")
+    
+    treatment_tab1, treatment_tab2, treatment_tab3 = st.tabs(["AMS Treatment", "HACE Treatment", "HAPE Treatment"])
+    
+    with treatment_tab1:
+        st.markdown("""
+        ### Acute Mountain Sickness (AMS) Treatment
+        
+        **Mild-Moderate AMS (Lake Louise Score 3-5):**
+        - **STOP ASCENT** - remain at current altitude
+        - Monitor closely for progression
+        - **Symptom relief:**
+          - Ibuprofen 600mg every 8 hours (STRONG RECOMMENDATION)
+          - Acetaminophen 1000mg every 8 hours (alternative)
+        - **Adequate hydration** (not overhydration)
+        - **Rest** for 1-3 days until symptoms resolve
+        - **Acetazolamide** 250mg every 12 hours may be considered (STRONG RECOMMENDATION)
+        - **Descend** if symptoms worsen or fail to improve
+        
+        **Severe AMS (Lake Louise Score 6-12):**
+        - **CEASE ASCENDING** immediately
+        - **DESCEND** to lower elevation
+        - **Dexamethasone** 4mg every 6 hours (STRONG RECOMMENDATION)
+        - **Acetazolamide** 250mg every 12 hours (can be used as adjunct)
+        - **Supplemental oxygen** if available (target SpO₂ >90%)
+        - **Portable hyperbaric chamber** if descent not feasible
+        
+        **Return to Ascent:**
+        - Only after complete symptom resolution
+        - Use acetazolamide prophylaxis for reascent
+        - Slower ascent rate than previous attempt
+        """)
+    
+    with treatment_tab2:
+        st.markdown("""
+        ### High Altitude Cerebral Edema (HACE) Treatment
+        
+        **HACE is a MEDICAL EMERGENCY**
+        
+        **Immediate Treatment (STRONG RECOMMENDATIONS):**
+        1. **DESCEND IMMEDIATELY** 300-1,000m
+           - Do NOT descend alone
+           - Mechanical transport preferred (minimize exertion)
+           - Continue descent until symptoms resolve
+        
+        2. **Dexamethasone** (PRIMARY TREATMENT)
+           - **Adults:** 8mg immediately, then 4mg every 6 hours
+           - **Children:** 0.15 mg/kg/dose every 6 hours (max 4mg/dose)
+           - Continue during and after descent until symptoms resolve
+        
+        3. **Supplemental Oxygen**
+           - 2-4 L/min or higher to achieve SpO₂ >90%
+           - Continue during descent
+        
+        4. **Portable Hyperbaric Chamber**
+           - Use if descent impossible or delayed
+           - Does not replace descent when feasible
+        
+        5. **Acetazolamide**
+           - Can be used as adjunct to dexamethasone
+           - 250mg every 12 hours
+        
+        **Clinical Signs:**
+        - Ataxia (heel-to-toe walking test failure)
+        - Altered mental status, confusion
+        - Severe lassitude, inability to self-care
+        - Progression to coma if untreated
+        
+        **NO REASCENT** during same trip after HACE
+        """)
+    
+    with treatment_tab3:
+        st.markdown("""
+        ### High Altitude Pulmonary Edema (HAPE) Treatment
+        
+        **HAPE is a MEDICAL EMERGENCY**
+        
+        **Immediate Treatment (STRONG RECOMMENDATIONS):**
+        
+        1. **DESCEND IMMEDIATELY**
+           - Descend at least 1,000m or until symptoms resolve
+           - **MINIMIZE EXERTION** (use mechanical transport if possible)
+           - Exertion worsens pulmonary edema
+        
+        2. **Supplemental Oxygen** (First-line)
+           - Target SpO₂ >90%
+           - Suitable alternative to immediate descent in monitored settings
+           - Continue until stable off oxygen
+        
+        3. **Nifedipine** (Use ONLY if oxygen unavailable)
+           - **Dose:** 30mg extended release every 12 hours
+           - Do NOT use short-acting version (hypotension risk)
+           - May not provide additional benefit if oxygen available
+           - Use only when descent/oxygen impossible or delayed
+        
+        4. **Portable Hyperbaric Chamber**
+           - Use if descent delayed and oxygen unavailable
+           - Does not replace descent when feasible
+        
+        5. **Alternative Medications (if nifedipine unavailable):**
+           - **Tadalafil** 10mg every 12 hours OR
+           - **Sildenafil** 50mg every 8 hours
+           - **WEAK RECOMMENDATION** - limited evidence
+           - Do NOT combine multiple vasodilators (hypotension risk)
+        
+        6. **CPAP/EPAP** (Adjunctive therapy)
+           - May improve oxygenation
+           - Use as adjunct to oxygen in monitored settings
+           - Requires patient cooperation and normal mental status
+        
+        **DO NOT USE:**
+        - ❌ Diuretics (may worsen intravascular depletion)
+        - ❌ Acetazolamide (no benefit, may cause hypotension)
+        - ❌ Beta-agonists (insufficient evidence)
+        
+        **Concurrent HAPE and HACE:**
+        - Add **Dexamethasone** to HAPE treatment
+        - Prefer phosphodiesterase inhibitors over nifedipine (less hypotension)
+        
+        **Reascent:**
+        - Only after complete resolution off oxygen
+        - Use nifedipine prophylaxis for reascent
+        - Very gradual ascent rate
+        """)
+    
+    # Additional Information
+    st.markdown("---")
+    st.header("📚 Additional Clinical Information")
+    
+    with st.expander("🔬 What NOT to Use (WMS 2024)"):
+        st.markdown("""
+        **NOT RECOMMENDED for AMS/HACE Prevention:**
+        - ❌ **Inhaled Budesonide** - Multiple high-quality studies show no benefit
+        - ❌ **Ginkgo biloba** - Inconsistent evidence, not standardized
+        - ❌ **Acetaminophen** - Not effective for prevention
+        - ❌ **Hypoxic tents** - Insufficient evidence for benefit
+        - ❌ **Coca leaves/tea** - Not properly studied
+        - ❌ **Forced hydration** - No benefit, may cause hyponatremia
+        - ❌ **Oxygen bars** - Too brief to provide benefit
+        - ❌ **Over-the-counter supplements/patches** - No evidence
+        
+        **NOT RECOMMENDED for HAPE Prevention:**
+        - ❌ **Acetazolamide** - No benefit for HAPE (use for AMS only)
+        - ❌ **Salmeterol** - High-dose side effects, limited experience
+        
+        **NOT RECOMMENDED for Treatment:**
+        - ❌ **Diuretics for HAPE** - May worsen condition
+        - ❌ **Acetazolamide for HAPE** - No benefit
+        """)
+    
+    with st.expander("⚕️ When to Seek Medical Care"):
+        st.markdown("""
+        **Immediate Medical Evacuation Required:**
+        - Loss of coordination (ataxia)
+        - Altered mental status or confusion
+        - Severe shortness of breath at rest
+        - Cough with pink or frothy sputum
+        - Inability to walk or care for oneself
+        - Blue discoloration of lips/fingertips
+        - Symptoms worsening despite treatment
+        
+        **Seek Medical Evaluation:**
+        - AMS symptoms not improving after 1-3 days of rest
+        - Unable to tolerate oral medications due to vomiting
+        - Uncertainty about diagnosis
+        - Need for oxygen or medications not available
+        - Any concerning symptoms
+        
+        **Differential Diagnosis to Consider:**
+        - Carbon monoxide poisoning (similar symptoms to AMS)
+        - Dehydration (mimics AMS)
+        - Hypothermia (can present with ataxia)
+        - Hypoglycemia (altered mental status)
+        - Hyponatremia (from overhydration)
+        - Pneumonia (respiratory symptoms)
+        - Viral upper respiratory infection
+        - Pulmonary embolism
+        - Myocardial infarction
+        - Exhaustion (severe fatigue)
+        """)
+    
+    with st.expander("🏥 Post-COVID-19 High Altitude Travel"):
+        st.markdown("""
+        **WMS 2024 Recommendations for COVID-19 Survivors:**
+        
+        **Most people recover fully** with no lasting effects on exercise capacity or gas exchange.
+        
+        **Pre-Travel Evaluation Recommended for:**
+        - Persistent symptoms >2 weeks after positive test or hospital discharge
+        - Required intensive care unit admission
+        - History of COVID-related myocarditis
+        - History of COVID-related thromboembolic disease
+        
+        **Recommended Testing:**
+        - Pulse oximetry (rest and with activity)
+        - Pulmonary function testing
+        - Chest X-ray
+        - Electrocardiography (ECG)
+        - B-type natriuretic peptide (BNP)
+        - High-sensitivity troponin
+        - Echocardiography
+        
+        **Additional Testing if Indicated:**
+        - Chest CT scan (if hypoxemia and abnormal CXR)
+        - Cardiac MRI (if elevated troponin or abnormal echo)
+        - Cardiopulmonary exercise testing (marked exercise limitation or heavy exertion planned)
+        
+        **Action:** Modify or defer travel plans based on results
+        """)
+    
+    with st.expander("👶 Pediatric Considerations"):
+        st.markdown("""
+        **Medication Dosing for Children:**
+        
+        **Acetazolamide (Prevention):**
+        - 1.25 mg/kg every 12 hours
+        - Maximum: 125mg per dose
+        - STRONG RECOMMENDATION for AMS prevention
+        
+        **Acetazolamide (Treatment):**
+        - 2.5 mg/kg every 12 hours
+        - Maximum: 250mg per dose
+        
+        **Dexamethasone (Treatment only):**
+        - 0.15 mg/kg every 6 hours
+        - Maximum: 4mg per dose
+        - NOT recommended for prophylaxis in children
+        
+        **Special Considerations:**
+        - Children can develop altitude illness at same elevations as adults
+        - May have difficulty communicating symptoms
+        - Symptoms may be misattributed to other causes
+        - Same ascent guidelines apply
+        - Acetazolamide is safe and effective for prevention
+        - Gradual ascent preferred over medication when possible
+        """)
+    
+    with st.expander("📊 Lake Louise Scoring System (Updated 2018)"):
+        st.markdown("""
+        **Self-Report AMS Score:**
+        
+        Rate each symptom from 0-3:
+        - **0** = Not present
+        - **1** = Mild
+        - **2** = Moderate  
+        - **3** = Severe
+        
+        **Symptoms:**
+        1. Headache
+        2. Gastrointestinal (nausea, vomiting, anorexia)
+        3. Fatigue/weakness
+        4. Dizziness/lightheadedness
+        
+        **Total Score Interpretation:**
+        - **0-2:** No AMS
+        - **3-5:** Mild-Moderate AMS
+        - **6-12:** Severe AMS
+        
+        **Note:** 
+        - Headache is emphasized as cardinal feature
+        - Sleep disturbance de-emphasized in diagnosis
+        - Functional status important: if you feel ill and must reduce activities = likely AMS
+        """)
+    
+    with st.expander("💡 Practical Tips & Best Practices"):
+        st.markdown("""
+        **Ascent Planning:**
+        - Plan itinerary with gradual ascent in mind
+        - Build in flexibility for extra rest days if needed
+        - "Climb high, sleep low" strategy when possible
+        - Avoid alcohol first 48 hours at new altitude
+        - Avoid sleeping pills (suppress breathing)
+        
+        **Hydration:**
+        - Maintain normal hydration (not overhydration)
+        - Aim for clear to pale yellow urine
+        - Don't force excessive fluids (hyponatremia risk)
+        
+        **Physical Activity:**
+        - Reduce exercise intensity first 1-2 days
+        - Listen to your body
+        - Don't "push through" worsening symptoms
+        
+        **Medication Timing:**
+        - Start acetazolamide night before ascent
+        - Continue 2 days at highest elevation
+        - Can stop when descent initiated (if no symptoms)
+        
+        **Recognition:**
+        - Most symptoms appear 6-12 hours after ascent
+        - Peak symptoms typically 1-2 days after arrival
+        - Improvement expected by day 3 with acclimatization
+        - Worsening symptoms = descend
+        
+        **Group Travel:**
+        - Communicate symptoms openly
+        - Don't pressure others to continue if symptomatic
+        - Buddy system for monitoring
+        - Leadership should prioritize safety over summit goals
+        """)
+    
+    with st.expander("🔍 Evidence Quality & Recommendation Strength"):
+        st.markdown("""
+        **WMS 2024 uses CHEST grading system:**
+        
+        **Recommendation Strength:**
+        - **Strong:** "We recommend..." - Benefits clearly outweigh risks
+        - **Weak:** "We suggest..." - Benefits likely outweigh risks but less certain
+        
+        **Evidence Quality:**
+        - **High:** Further research unlikely to change confidence in estimate
+        - **Moderate:** Further research may impact confidence
+        - **Low:** Further research very likely to impact confidence
+        
+        **Key Strong Recommendations (High-Quality Evidence):**
+        - Gradual ascent for prevention
+        - Acetazolamide for AMS prevention (moderate-high risk)
+        - Dexamethasone for AMS prevention (alternative)
+        - Descent for any altitude illness
+        - Supplemental oxygen for AMS/HACE/HAPE
+        - Dexamethasone for AMS/HACE treatment
+        - Nifedipine for HAPE prevention (susceptible individuals)
+        
+        **Areas with Limited Evidence:**
+        - Optimal preacclimatization protocols
+        - Pediatric medication dosing
+        - Reascent after HACE/HAPE
+        - Many alternative treatments
+        """)
+
+else:
+    # Welcome screen
+    st.info("""
+    👋 **Welcome to the Altitude Sickness Risk Analyzer!**
+    
+    This tool is based on the **2024 Wilderness Medical Society Clinical Practice Guidelines** 
+    for the Prevention, Diagnosis, and Treatment of Acute Altitude Illness.
+    
+    **Features:**
+    - ✅ Evidence-based risk assessment
+    - ✅ Location elevation lookup worldwide
+    - ✅ Symptom checker with Lake Louise scoring
+    - ✅ Prevention strategies (Strong recommendations)
+    - ✅ Treatment protocols for AMS, HACE, and HAPE
+    - ✅ Medication dosing (adults and children)
+    - ✅ Updated 2024 guidelines
+    
+    **Get started by entering a location in the sidebar** or manually entering an elevation.
+    
+    **Popular destinations to try:**
+    - Mount Everest Base Camp, Nepal (5,364m)
+    - Machu Picchu, Peru (2,430m)  
+    - Mount Kilimanjaro, Tanzania (5,895m)
+    - La Paz, Bolivia (3,650m)
+    - Lhasa, Tibet (3,656m)
+    - Cusco, Peru (3,400m)
+    - Quito, Ecuador (2,850m)
+    """)
+    
+    st.markdown("""
+    <div class="guideline-box">
+        <h3>📋 Key Altitude Thresholds</h3>
+        <ul>
+            <li><strong>2,500m:</strong> Threshold for altitude illness risk</li>
+            <li><strong>3,000m:</strong> Begin strict ascent rate limits (≤500m/day)</li>
+            <li><strong>3,500m:</strong> Very high altitude - increased risk</li>
+            <li><strong>5,800m:</strong> Extreme altitude - permanent habitation limit</li>
+            <li><strong>8,000m:</strong> "Death zone" - supplemental oxygen required</li>
+        </ul>
+    </div>
+    """, unsafe_allow_html=True)
+    
+    st.warning("""
+    ⚠️ **Medical Disclaimer:** This tool provides information based on current medical guidelines 
+    but does not replace professional medical advice, diagnosis, or treatment. Always consult with 
+    a qualified healthcare provider before traveling to high altitudes, especially if you have 
+    pre-existing medical conditions, are pregnant, or have had previous altitude illness.
+    
+    **In case of emergency altitude illness:** Descend immediately and seek medical attention.
+    """)
+
+# Footer
+st.markdown("---")
+st.markdown("""
+<div style='text-align: center; color: #666; padding: 1rem;'>
+    <p><strong>⚠️ EMERGENCY:</strong> If experiencing severe symptoms (confusion, ataxia, severe breathlessness), 
+    <strong>DESCEND IMMEDIATELY</strong> and seek medical help.</p>
+    <p><strong>Guidelines Source:</strong> Wilderness Medical Society Clinical Practice Guidelines 2024</p>
+    <p><strong>Authors:</strong> Luks AM, Beidleman BA, Freer L, Grissom CK, Keyes LE, McIntosh SE, et al.</p>
+    <p><strong>Published:</strong> Wilderness & Environmental Medicine 2024, Vol. 35(1S)</p>
+    <p style='margin-top: 1rem; font-size: 0.9em;'>
+        <strong>Data Sources:</strong> OpenStreetMap Nominatim (geocoding) • Open-Elevation API (elevation data)
+    </p>
+</div>
+""", unsafe_allow_html=True)
